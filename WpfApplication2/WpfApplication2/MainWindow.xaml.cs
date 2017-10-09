@@ -22,7 +22,6 @@ namespace WpfApplication2
     {
         public MainWindow()
         {
-			int ;
             InitializeComponent();
         }
     }
