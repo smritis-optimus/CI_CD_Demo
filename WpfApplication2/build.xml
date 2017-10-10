@@ -5,14 +5,11 @@
     <Build>$(MSBuildProjectDirectory)\Build</Build>
     <ProjectFile>WpfApplication2.sln</ProjectFile> 
     <ProjectName>WpfApplication2</ProjectName>
-    <CopyTo>C:\inetpub\wwwroot\mfopWebsite</CopyTo>
-  </PropertyGroup> 
+    </PropertyGroup> 
 
   <Target Name="Build"> 
     <RemoveDir Directories="$(Build)"/>  
     <MSBuild Projects="$(ProjectFile)" Properties="Configuration=Debug;OutputPath=$(Build);OutDir=$(Build)/"></MSBuild>  
-     <Exec Command="robocopy.exe  $(Build)\_PublishedWebsites $(CopyTo) /e /is
-      if %errorlevel% leq 4 exit 0 else exit %errorlevel%"/>
 </Target>
 
 </Project>
